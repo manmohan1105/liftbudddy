@@ -6,13 +6,18 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +27,12 @@ public class car extends AppCompatActivity {
     private TextView startingpoint;
     private TextView time;
     private Button submit;
-    private ImageButton back;
+    private Button liftneederperson;
+    private ImageButton back1;
+
+
+
+
 
     List<car> carowner;
     DatabaseReference databasecar;
@@ -36,8 +46,14 @@ public class car extends AppCompatActivity {
         startingpoint=(TextView)findViewById( R.id.editText2 );
         time=(TextView)findViewById( R.id.editText3 );
         submit=(Button)findViewById( R.id.button );
-        back=(ImageButton)findViewById( R.id.imageButton1 ) ;
+        back1=(ImageButton)findViewById( R.id.imageButton3 ) ;
+        liftneederperson=(Button)findViewById( R.id.button2 );
         carowner = new ArrayList<>();
+
+
+
+
+
 
 
         databasecar = FirebaseDatabase.getInstance().getReference("carowner");
@@ -52,7 +68,7 @@ public class car extends AppCompatActivity {
             }
         });
 
-        back.setOnClickListener(new View.OnClickListener() {
+        back1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -60,7 +76,27 @@ public class car extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        liftneederperson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //calling the method addArtist()
+                //the method is defined below
+                //this method is actually performing the write operation
+
+                Intent i = new Intent(getApplicationContext(),retrieve.class);
+                startActivity(i);
+            }
+        });
+
     }
+
+
+
+
+
+
+
 
 
 

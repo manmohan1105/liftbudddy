@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 
-    <color name="purple">#7c4dff</color>
+    <color name="purple">#271260</color>
     <color name="yellow">#ffb300</color>
     <color name="green">#00bfa5</color>
     <color name="darkblue">#2980b9</color>
@@ -13,7 +13,9 @@
     <color name="lightgray">#808080</color>
     <color name="testcolorblue">#152b38</color>
     <color name="pink">#fe104d</color>
-
+    <color name="colorPurple">#A130FF</color>
+    <color name="colorBlue">#28A2CF</color>
+    <color name="colorWhite">#ffffff</color>
 
     <color name="backgroundcolor">#fcfcfc</color>
 

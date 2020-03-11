@@ -24,6 +24,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
+        android:background="@drawable/bt_uiborder"
+
+        android:textColor="@color/colorPurple"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
@@ -40,14 +43,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.268"
+
         app:srcCompat="@color/colorAccent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="104dp"
-        android:layout_height="45dp"
+        android:layout_width="126dp"
+        android:layout_height="60dp"
         android:background="@color/backgroundcolor"
-        android:text="vechile"
+        android:text="lift-giver"
         android:textColor="@color/yello"
         android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
         android:textSize="30sp"
@@ -78,7 +82,7 @@
         android:layout_width="162dp"
         android:layout_height="65dp"
         android:background="@color/backgroundcolor"
-        android:text="   lift taker"
+        android:text="   lift -taker"
         android:textColor="@color/yello"
         android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
         android:textSize="30sp"
@@ -88,6 +92,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.639" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="49dp"
+        android:layout_height="31dp"
+        android:background="@drawable/bt_uiborder"
+        android:textColor="@color/colorPurple"
+        app:srcCompat="@drawable/ic_backspace_black_24dp"
+        tools:ignore="MissingConstraints"
+
+        tools:layout_editor_absoluteX="347dp"
+        tools:layout_editor_absoluteY="13dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

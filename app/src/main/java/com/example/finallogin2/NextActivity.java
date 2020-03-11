@@ -1,6 +1,7 @@
 package com.example.finallogin2;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ public class NextActivity extends AppCompatActivity {
     private Button signOut;
     private ImageButton carOwner;
     private ImageButton lifttaker;
+    private ImageButton close;
     public static final int RC_SIGN_IN = 1;
     GoogleSignInClient mGoogleSignInClient;
     public static final String TAG = "NextActivity";
@@ -36,12 +38,21 @@ public class NextActivity extends AppCompatActivity {
         signOut = (Button) findViewById(R.id.sign_out);
         carOwner = (ImageButton) findViewById(R.id.imageButton);
         lifttaker=(ImageButton)findViewById( R.id.imageButton1 );
+        close=(ImageButton)findViewById( R.id.imageButton2);
         mAuth = FirebaseAuth.getInstance();
 
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mAuth.signOut(); //get signed out
+                Intent i = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(i);
+            }
+        });
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
                 Intent i = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(i);
             }

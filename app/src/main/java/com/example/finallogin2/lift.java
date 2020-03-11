@@ -23,6 +23,7 @@ public class lift extends AppCompatActivity {
     private TextView time;
     private Button submit;
     private ImageButton back;
+    private ImageButton close;
 
     List<car> lifttaker;
     DatabaseReference databaselifttaker;
@@ -36,6 +37,7 @@ back=(ImageButton)findViewById( R.id.imageButton3 ) ;
         startingpoint=(TextView)findViewById( R.id.editText2 );
         time=(TextView)findViewById( R.id.editText3 );
         submit=(Button)findViewById( R.id.button );
+
         lifttaker = new ArrayList<>();
 
 
@@ -50,6 +52,7 @@ back=(ImageButton)findViewById( R.id.imageButton3 ) ;
                 addlifttaker();
             }
         });
+
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,34 +1,50 @@
 package com.example.finallogin2;
 
 public class Lifttaker {
-    String OwnerId;
-    String OwnerDestination;
-    String OwnerStartingPoint;
-    String Time;
+    String ownerId;
+    String ownerDestination;
+    String ownerStartingPoint;
+    String time;
     public Lifttaker(){
 
     }
 
     public Lifttaker(String ownerId, String ownerDestination, String ownerStartingPoint, String time) {
-        OwnerId = ownerId;
-        OwnerDestination = ownerDestination;
-        OwnerStartingPoint = ownerStartingPoint;
-        Time = time;
+        this.ownerId = ownerId;
+        this.ownerDestination = ownerDestination;
+        this.ownerStartingPoint = ownerStartingPoint;
+        this.time = time;
     }
 
     public String getOwnerId() {
-        return OwnerId;
+        return ownerId;
+    }
+
+    public void setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
     }
 
     public String getOwnerDestination() {
-        return OwnerDestination;
+        return ownerDestination;
+    }
+
+    public void setOwnerDestination(String ownerDestination) {
+        this.ownerDestination = ownerDestination;
     }
 
     public String getOwnerStartingPoint() {
-        return OwnerStartingPoint;
+        return ownerStartingPoint;
+    }
+
+    public void setOwnerStartingPoint(String ownerStartingPoint) {
+        this.ownerStartingPoint = ownerStartingPoint;
     }
 
     public String getTime() {
-        return Time;
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }

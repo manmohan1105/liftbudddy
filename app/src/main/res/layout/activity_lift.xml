@@ -50,9 +50,12 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="372dp"
-        android:layout_height="45dp"
+        android:layout_width="304dp"
+        android:layout_height="55dp"
         android:text="Submit"
+        android:background="@drawable/bt_uiborder"
+
+        android:textColor="@color/colorPurple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.41"
@@ -61,10 +64,38 @@
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="95dp"
-        android:layout_height="46dp"
+        android:layout_width="75dp"
+        android:layout_height="51dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.016"
         app:srcCompat="@drawable/ic_arrow_back_black_24dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/bt_uiborder"
+
+        android:textColor="@color/colorPurple"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="275dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="41dp"
+
+        android:background="@drawable/bt_uiborder"
+        android:backgroundTint="@color/colorWhite"
+        android:text="Lift-Taker Window"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/colorPurple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        app:layout_constraintHorizontal_bias="0.311"
+
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
