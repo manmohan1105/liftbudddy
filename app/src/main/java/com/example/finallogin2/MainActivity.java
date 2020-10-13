@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
 
-        // Configure Google Sign In below this line
+        // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -66,10 +66,9 @@ public class MainActivity extends AppCompatActivity {
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mAuth.signOut();                             //get signed out
+                mAuth.signOut(); //get signed out
                 signOut.setVisibility(View.GONE);
                 Toast.makeText(MainActivity.this,"you are succesfully logged out",Toast.LENGTH_LONG).show();
-		Log.i("Condition:","worked!");
             }
         });
     }
@@ -77,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
+
+
     }
 
     @Override
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
                 Log.w(TAG, "Google sign in failed", e);
-                Log.i("GOOGLE:","Google sign in error occured!");
+                // ...
             }
         }
     }
@@ -112,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(i);
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
-
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
                         } else {
@@ -139,12 +139,14 @@ public class MainActivity extends AppCompatActivity {
             String personEmail = acct.getEmail();
             String personId = acct.getId();
             Uri personPhoto = acct.getPhotoUrl();
+
             Toast.makeText(this, "Name of the user :" + personName + " user id is : " + personId, LENGTH_SHORT).show();
+
         }
+
 
     }
 
-	
 }
 
 

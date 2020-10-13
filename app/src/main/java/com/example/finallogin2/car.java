@@ -30,6 +30,10 @@ public class car extends AppCompatActivity {
     private Button liftneederperson;
     private ImageButton back1;
 
+
+
+
+
     List<car> carowner;
     DatabaseReference databasecar;
 
@@ -79,13 +83,23 @@ public class car extends AppCompatActivity {
                 //calling the method addArtist()
                 //the method is defined below
                 //this method is actually performing the write operation
-                //below lines calls the next activity
+
                 Intent i = new Intent(getApplicationContext(),retrieve.class);
                 startActivity(i);
             }
         });
 
     }
+
+
+
+
+
+
+
+
+
+
 
     private void addcarowner() {
         //getting the values to save
@@ -112,10 +126,10 @@ public class car extends AppCompatActivity {
 //            editTextName.setText("");
 
             //displaying a success toast
-            Toast.makeText(this, "Data added successfully!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "data added", Toast.LENGTH_LONG).show();
         } else {
             //if the value is not given displaying a toast
-            Toast.makeText(this, "Please enter a valid name", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Please enter a name", Toast.LENGTH_LONG).show();
         }
     }
 }
