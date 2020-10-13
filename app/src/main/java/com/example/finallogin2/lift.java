@@ -57,7 +57,7 @@ back=(ImageButton)findViewById( R.id.imageButton3 ) ;
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //start a new activity
                 Intent i = new Intent(getApplicationContext(),NextActivity.class);
                 startActivity(i);
             }
@@ -94,6 +94,7 @@ back=(ImageButton)findViewById( R.id.imageButton3 ) ;
         } else {
             //if the value is not given displaying a toast
             Toast.makeText(this, "Please enter a name", Toast.LENGTH_LONG).show();
+	 	Log.i("NAME:","Name not valid");                                     //See in Logcat
         }
     }
 }
